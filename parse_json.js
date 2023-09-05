@@ -7,13 +7,13 @@ try {
 
   switch (jsonData.Operation) {
     case "I":
-      mySentence = INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES ('${jsonData.ShipperID}', '${jsonData.ShipperName}', '${jsonData.Phone}');
+      mySentence = `INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES ('${jsonData.ShipperID}', '${jsonData.ShipperName}', '${jsonData.Phone}');`
       break;
     case "U":
-      mySentence = UPDATE Shippers SET ShipperName = '${jsonData.ShipperName}', Phone = '${jsonData.Phone}' WHERE ShipperID = '${jsonData.ShipperID}';
+      mySentence = `UPDATE Shippers SET ShipperName = '${jsonData.ShipperName}', Phone = '${jsonData.Phone}' WHERE ShipperID = '${jsonData.ShipperID}';`
       break;
     case "D":
-      mySentence = DELETE FROM Shippers WHERE ShipperID = '${jsonData.ShipperID}';
+      mySentence = `DELETE FROM Shippers WHERE ShipperID = '${jsonData.ShipperID}';`
       break;
     default:
       mySentence = "Неизвестная операция";
