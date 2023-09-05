@@ -3,7 +3,7 @@ let myJSON = '{"Operation":"I", "ShipperID":"4", "ShipperName":"DPD", "Phone":"+
 let mySentence = "";
 
 try {
-  var jsonData = JSON.parse(myJSON);
+  let jsonData = JSON.parse(myJSON);
 
   switch (jsonData.Operation) {
     case "I":
